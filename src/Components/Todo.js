@@ -2,7 +2,7 @@ import React from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
 import { FaCheckDouble } from "react-icons/fa";
 
-import { Connect } from "react-redux";
+import { connect } from "react-redux";
 import { removeTodo, REMOVE_TODO } from "../action/todo";
 
 function Todo({ todos, markComplete }) {
@@ -30,4 +30,4 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
-export default Connect(mapStateToProps, mapDispatchToProps)(Todo);
+export default connect(mapStateToProps, mapDispatchToProps)(Todo);

@@ -4,7 +4,7 @@ import { FormGroup, Input, Button, Form, InputGroup } from "reactstrap";
 
 import { v4 } from "uuid";
 
-import { Connect } from "react-redux";
+import { connect } from "react-redux";
 import { addTodo } from "../action/todo";
 
 function TodoForm() {
@@ -48,12 +48,12 @@ function TodoForm() {
   );
 }
 
-const mapStateToProp = (state) => {};
+const mapStateToProp = (state) => ({});
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => ({
   addTodo: (todo) => {
     dispatch(addTodo(todo));
-  };
-};
+  },
+});
 
-export default Connect(mapStateToProp, mapDispatchToProps)(TodoForm);
+export default connect(mapStateToProp, mapDispatchToProps)(TodoForm);
