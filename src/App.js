@@ -7,8 +7,8 @@ import { Provider } from "react-redux";
 
 function App() {
   return (
-    <Provider>
-      <Container>
+    <Provider store={store}>
+      <Container fluid>
         <Todo />
         <TodoForm />
       </Container>
