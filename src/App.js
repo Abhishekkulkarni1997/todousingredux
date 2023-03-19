@@ -8,7 +8,7 @@ import store from "./store.js";
 
 function App() {
   return (
-    <Provider store={{ store }}>
+    <Provider store={store}>
       <Container fluid>
         <Todo />
         <TodoForm />

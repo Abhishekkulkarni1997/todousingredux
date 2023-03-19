@@ -3,19 +3,22 @@ import { ListGroup, ListGroupItem } from "reactstrap";
 import { FaCheckDouble } from "react-icons/fa";
 
 import { connect } from "react-redux";
-import { removeTodo, REMOVE_TODO } from "../action/todo";
+
+import { removeTodo } from "../action/todo";
 
 function Todo({ todos, markComplete }) {
+  console.log(todos);
   return (
     <ListGroup className="mt-5 mb-2">
-      {todos.map((todo) => (
-        <ListGroupItem key={todo.id}>
-          {todo.title}
-          <span className="float-right" onClick={() => markComplete(todo.id)}>
-            <FaCheckDouble />
-          </span>
-        </ListGroupItem>
-      ))}
+      {todos &&
+        todos.map((todo) => (
+          <ListGroupItem key={todo.id}>
+            {todo.title}
+            <span className="float-right" onClick={() => markComplete(todo.id)}>
+              <FaCheckDouble />
+            </span>
+          </ListGroupItem>
+        ))}
     </ListGroup>
   );
 }

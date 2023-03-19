@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { FormGroup, Input, Button, Form, InputGroup } from "reactstrap";
+import { Input, Button, Form, InputGroup } from "reactstrap";
 
 import { v4 } from "uuid";
 
@@ -28,21 +28,19 @@ function TodoForm() {
     <div>
       <h1>Add Todo</h1>
       <Form onSubmit={handleSubmit}>
-        <FormGroup>
-          <InputGroup>
-            <Input
-              type="text"
-              name="todo"
-              id="todo"
-              placeholder="Your Next Todo"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-            />
-            <Button color="primary" onClick={handleSubmit}>
-              ADD
-            </Button>
-          </InputGroup>
-        </FormGroup>
+        <InputGroup>
+          <Input
+            type="text"
+            name="todo"
+            id="todo"
+            placeholder="Your Next Todo"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <Button color="primary" onClick={handleSubmit}>
+            ADD
+          </Button>
+        </InputGroup>
       </Form>
     </div>
   );
