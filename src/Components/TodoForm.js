@@ -5,7 +5,7 @@ import { Input, Button, Form, InputGroup } from "reactstrap";
 import { v4 } from "uuid";
 
 import { connect } from "react-redux";
-import { addTodo } from "../action/todo";
+import { addTodo } from "../action/todo.js";
 
 function TodoForm() {
   const [title, setTitle] = useState("");

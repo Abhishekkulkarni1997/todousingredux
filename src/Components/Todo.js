@@ -7,7 +7,6 @@ import { connect } from "react-redux";
 import { removeTodo } from "../action/todo";
 
 function Todo({ todos, markComplete }) {
-  console.log(todos);
   return (
     <ListGroup className="mt-5 mb-2">
       {todos &&
